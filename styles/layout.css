@@ -1,0 +1,108 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+.navbar {
+  overflow: hidden;
+  background-color: #333; 
+}
+
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.subnav {
+  float: left;
+  overflow: hidden;
+}
+
+.subnav .subnavbtn {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.navbar a:hover, .subnav:hover .subnavbtn {
+  background-color: red;
+}
+
+.subnav-content {
+  display: none;
+  position: absolute;
+  left: 0;
+  background-color: red;
+  width: 100%;
+  z-index: 1;
+}
+
+.subnav-content a {
+  float: left;
+  color: white;
+  text-decoration: none;
+}
+
+.subnav-content a:hover {
+  background-color: #eee;
+  color: black;
+}
+
+.subnav:hover .subnav-content {
+  display: block;
+}
+
+/* oma lisäys */
+/* Tyyli aktiiviselle linkille */
+.navbar a.active {
+  background-color: #007bff; /* Sininen tausta aktiiviselle linkille */
+  color: #fff; /* Valkoinen teksti aktiiviselle linkille */
+  font-weight: bold;
+}
+
+/* Lisää tyyliä aktiiviselle linkille */
+.navbar a.active:hover {
+  background-color: #0056b3; /* Tummempi sininen tausta hover-tilassa */
+}
+/* oma lisäys */
+
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+  position: fixed; /* Kiinnitä footer alareunaan */
+  bottom: 0; /* Aseta footerin sijainti alareunaan */
+  width: 100%; /* Leveys koko näytön leveydelle */
+}
+
+.event-section {
+    background-color: #f2f2f2;
+    padding: 10px;
+    margin-left: 20px;
+    float: right;
+    width: 30%;
+}
+
+.purpose-section {
+    background-color: #f2f2f2;
+    padding: 10px;
+    margin-right: 20px;
+    float: left;
+    width: 30%;
+}
+@media (min-width: 769px) {
+  .event-section,
+  .purpose-section {
+      width: 30%;
+  }
+}
