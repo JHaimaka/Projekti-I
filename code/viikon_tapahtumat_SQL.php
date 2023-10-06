@@ -7,7 +7,7 @@ include_once("asetukset.php");
 // echo " .... luo yhteys ... <br>";
 // echo "<h2>Luodaan yhteys tunnuksilla: $db_server, $db_username, $db_password, $tietokanta</h2>";
 
-$yhteys = mysqli_connect($db_server, $db_username, $db_password, $db_table_local);
+$yhteys = mysqli_connect($db_server, $db_username, $db_password, $db_table);
 
 if (!$yhteys) {
   $virheviesti = "Yhteys MySQL-tietokantaan epäonnistui: " . mysqli_connect_error();
