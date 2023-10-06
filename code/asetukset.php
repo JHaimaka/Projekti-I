@@ -23,14 +23,20 @@ if ($LOCAL) {
     $db_username = $db_username_local; 
     $db_password = $db_password_local;
     // $db_table määritetty tunnukset.php -tiedostossa
-    }
-elseif (strpos($_SERVER['HTTP_HOST'],"azurewebsites") !== false){
+}
+else {
     $db_server = $_ENV['MYSQL_HOSTNAME'];
     $db_username = $_ENV['MYSQL_USERNAME'];
     $db_password = $_ENV['MYSQL_PASSWORD'];
     $db_table = $_ENV['MYSQL_TABLE'];
-    }
+}
 
+    // elseif (strpos($_SERVER['HTTP_HOST'],"azurewebsites") !== false){
+    //     $db_server = $_ENV['MYSQL_HOSTNAME'];
+    //     $db_username = $_ENV['MYSQL_USERNAME'];
+    //     $db_password = $_ENV['MYSQL_PASSWORD'];
+    //     $db_table = $_ENV['MYSQL_TABLE'];
+    //     }
     echo "azurewebsites: $db_server";
 
 ?>
