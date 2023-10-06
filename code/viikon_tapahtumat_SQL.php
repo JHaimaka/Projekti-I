@@ -1,26 +1,13 @@
 <?php 
-// tämä php -tiedosto on kansiossa C:\xampp\htdocs\projektit_PHP\PHP_MySQL_v4.php ja tunnukset.php kansiossa C:\xampp
-//
 
-$tunnukset = "../../../tunnukset.php";
- if(file_exists($tunnukset)) {
-  require $tunnukset;
-//  echo "<h2> Tunnukset haettu : $db_server_local $db_user_local $db_password_local $db_table_local</h2><br>";
-} else {
-  die("Tiedostoa: $tunnukset ei löydy.");
-}
+include_once("asetukset.php");
 
-// echo "<h2>Tiedostosta haun jälkeen: $db_server_local $db_user_local $db_password_local $db_table_local</h2>";
 
-$palvelin = $db_server_local;
-$kayttajatunnus = $db_user_local;  
-$salasana = $db_password_local; 
-$tietokanta = $db_table_local;
 
 // echo " .... luo yhteys ... <br>";
-// echo "<h2>Luodaan yhteys tunnuksilla: $palvelin, $kayttajatunnus, $salasana, $tietokanta</h2>";
+// echo "<h2>Luodaan yhteys tunnuksilla: $db_server, $db_username, $db_password, $tietokanta</h2>";
 
-$yhteys = mysqli_connect($palvelin, $kayttajatunnus, $salasana, $tietokanta);
+$yhteys = mysqli_connect($db_server, $db_username, $db_password, $db_table_local);
 
 if (!$yhteys) {
   $virheviesti = "Yhteys MySQL-tietokantaan epäonnistui: " . mysqli_connect_error();
