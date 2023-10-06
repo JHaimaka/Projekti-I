@@ -90,7 +90,7 @@ footer {
     padding: 10px;
     margin-left: 20px;
     float: right;
-    width: 30%;
+    width: 10vw;;
 }
 
 .purpose-section {
@@ -98,11 +98,11 @@ footer {
     padding: 10px;
     margin-right: 20px;
     float: left;
-    width: 30%;
+    width: 10vw;;
 }
 @media (min-width: 769px) {
   .event-section,
   .purpose-section {
-      width: 30%;
+      width: 10vw; /*40%*/
   }
 }
