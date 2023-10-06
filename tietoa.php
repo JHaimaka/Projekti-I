@@ -20,7 +20,7 @@
   <main>
 
     <div class="purpose-section">
-        <h2>Tässä osiossa määritellään mitä lisätään</h2>
+        <h2>Tässä osiossa kerrotaan tapahtumista</h2>
         <!-- Tähän voit lisätä sivun tarkoituksen sisällön -->
         <?php include 'code/sivun_tarkoitus.php';?>
     </div>
