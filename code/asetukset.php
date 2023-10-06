@@ -32,6 +32,6 @@ else {
     //     $db_password = $_ENV['MYSQL_PASSWORD'];
     //     $db_table = $_ENV['MYSQL_TABLE'];
     //     }
-    echo "azurewebsites: $db_server";
+    // echo "azurewebsites: $db_server";
 
 ?>
