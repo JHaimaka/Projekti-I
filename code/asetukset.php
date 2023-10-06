@@ -31,4 +31,6 @@ elseif (strpos($_SERVER['HTTP_HOST'],"azurewebsites") !== false){
     $db_table = $_ENV['MYSQL_TABLE'];
     }
 
+    echo "azurewebsites: $db_server";
+
 ?>
